@@ -1,5 +1,5 @@
 {
-  "name": "@powerbase/auth-js",
+  "name": "@skorpland/auth-js",
   "version": "0.0.0",
   "private": false,
   "description": "Official client library for Powerbase Auth",
