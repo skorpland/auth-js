@@ -17,12 +17,15 @@
     "dist",
     "src"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "main": "dist/main/index.js",
   "module": "dist/module/index.js",
   "types": "dist/module/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skorpland/powerbase.git"
+    "url": "git+https://github.com/skorpland/auth-js.git"
   },
   "scripts": {
     "clean": "rimraf dist docs",
@@ -68,8 +71,5 @@
     "ts-jest": "^28.0.7",
     "typedoc": "^0.22.16",
     "typescript": "^4.7.4"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  } 
 }
