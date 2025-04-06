@@ -1,6 +1,6 @@
 {
   "name": "@skorpland/auth-js",
-  "version": "2.69.1",
+  "version": "2.69.2",
   "private": false,
   "description": "Official client library for Powerbase Auth",
   "keywords": [
@@ -20,7 +20,10 @@
   "main": "dist/main/index.js",
   "module": "dist/module/index.js",
   "types": "dist/module/index.d.ts",
-  "repository": "github:powerbase/auth-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skorpland/powerbase.git"
+  },
   "scripts": {
     "clean": "rimraf dist docs",
     "coverage": "echo \"run npm test\"",
@@ -68,9 +71,5 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/skorpland/powerbase.git"
   }
 }
