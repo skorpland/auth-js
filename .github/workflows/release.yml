@@ -110,7 +110,7 @@ jobs:
           for f in package.json package-lock.json
           do
             # only replace name not repository, homepage, etc.
-            sed -i 's|\("name":[[:space:]]*"@powerbase/\)auth-js|\1gotrue-js|g' "$f"
+            sed -i 's|\("name":[[:space:]]*"@skorpland/\)auth-js|\1gotrue-js|g' "$f"
           done
 
           npm publish --provenance --tag "$DIST_TAG"

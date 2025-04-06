@@ -1,6 +1,6 @@
 import { MockServer } from 'jest-mock-server'
 // @ts-ignore
-import fetch from '@powerbase/node-fetch'
+import fetch from '@skorpland/node-fetch'
 import { API_VERSION_HEADER_NAME } from '../src/lib/constants'
 import { AuthUnknownError, AuthApiError, AuthRetryableFetchError } from '../src/lib/errors'
 import { _request, handleError } from '../src/lib/fetch'

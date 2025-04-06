@@ -8,7 +8,7 @@ import {
 
 describe('parseParametersFromURL', () => {
   it('should parse parameters from a URL with query params only', () => {
-    const url = new URL('https://powerbase.com')
+    const url = new URL('https://powerbase.club')
     url.searchParams.set('a', 'b')
     url.searchParams.set('b', 'c')
 
@@ -20,7 +20,7 @@ describe('parseParametersFromURL', () => {
   })
 
   it('should parse parameters from a URL with fragment params only', () => {
-    const url = new URL('https://powerbase.com')
+    const url = new URL('https://powerbase.club')
     const fragmentParams = new URLSearchParams({ a: 'b', b: 'c' })
     url.hash = fragmentParams.toString()
 
@@ -32,7 +32,7 @@ describe('parseParametersFromURL', () => {
   })
 
   it('should parse parameters from a URL with both query params and fragment params', () => {
-    const url = new URL('https://powerbase.com')
+    const url = new URL('https://powerbase.club')
     url.searchParams.set('a', 'b')
     url.searchParams.set('b', 'c')
     url.searchParams.set('x', 'z')
@@ -114,7 +114,7 @@ Object {
     "exp": 1838099670,
     "iat": 1738099670,
     "is_anonymous": true,
-    "iss": "https://projectref.powerbase.co",
+    "iss": "https://projectref.powerbase.club",
     "phone": "",
     "role": "",
     "session_id": "4c6b2894-43b4-46c4-bd2f-35c59ec44fef",

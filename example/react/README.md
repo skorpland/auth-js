@@ -6,7 +6,7 @@
 
 ### 1. Create new project
 
-Sign up to Powerbase - [https://app.powerbase.io](https://app.powerbase.io) and create a new project. Wait for your database to start.
+Sign up to Powerbase - [https://app.powerbase.club](https://app.powerbase.club) and create a new project. Wait for your database to start.
 
 ### 2. Get the URL and Key
 
@@ -20,7 +20,7 @@ Go to the Project Settings (the cog icon), open the API tab, and find your API U
 
 #### [Optional] - Set up OAuth providers
 
-You can use third-party login providers like GitHub or Google. Refer to the [docs](https://powerbase.io/docs/guides/auth#third-party-logins) to learn how to configure these.
+You can use third-party login providers like GitHub or Google. Refer to the [docs](https://powerbase.club/docs/guides/auth#third-party-logins) to learn how to configure these.
 
 ### 3. Install and run
 

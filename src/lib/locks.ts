@@ -62,7 +62,7 @@ export async function navigatorLock<R>(
   fn: () => Promise<R>
 ): Promise<R> {
   if (internals.debug) {
-    console.log('@powerbase/gotrue-js: navigatorLock: acquire lock', name, acquireTimeout)
+    console.log('@skorpland/gotrue-js: navigatorLock: acquire lock', name, acquireTimeout)
   }
 
   const abortController = new globalThis.AbortController()
@@ -71,7 +71,7 @@ export async function navigatorLock<R>(
     setTimeout(() => {
       abortController.abort()
       if (internals.debug) {
-        console.log('@powerbase/gotrue-js: navigatorLock acquire timed out', name)
+        console.log('@skorpland/gotrue-js: navigatorLock acquire timed out', name)
       }
     }, acquireTimeout)
   }
@@ -100,20 +100,20 @@ export async function navigatorLock<R>(
       async (lock) => {
         if (lock) {
           if (internals.debug) {
-            console.log('@powerbase/gotrue-js: navigatorLock: acquired', name, lock.name)
+            console.log('@skorpland/gotrue-js: navigatorLock: acquired', name, lock.name)
           }
 
           try {
             return await fn()
           } finally {
             if (internals.debug) {
-              console.log('@powerbase/gotrue-js: navigatorLock: released', name, lock.name)
+              console.log('@skorpland/gotrue-js: navigatorLock: released', name, lock.name)
             }
           }
         } else {
           if (acquireTimeout === 0) {
             if (internals.debug) {
-              console.log('@powerbase/gotrue-js: navigatorLock: not immediately available', name)
+              console.log('@skorpland/gotrue-js: navigatorLock: not immediately available', name)
             }
 
             throw new NavigatorLockAcquireTimeoutError(
@@ -125,12 +125,12 @@ export async function navigatorLock<R>(
                 const result = await globalThis.navigator.locks.query()
 
                 console.log(
-                  '@powerbase/gotrue-js: Navigator LockManager state',
+                  '@skorpland/gotrue-js: Navigator LockManager state',
                   JSON.stringify(result, null, '  ')
                 )
               } catch (e: any) {
                 console.warn(
-                  '@powerbase/gotrue-js: Error when querying Navigator LockManager state',
+                  '@skorpland/gotrue-js: Error when querying Navigator LockManager state',
                   e
                 )
               }
@@ -141,7 +141,7 @@ export async function navigatorLock<R>(
             // pretend the lock is acquired in the name of backward compatibility
             // and user experience and just run the function.
             console.warn(
-              '@powerbase/gotrue-js: Navigator LockManager returned a null lock when using #request without ifAvailable set to true, it appears this browser is not following the LockManager spec https://developer.mozilla.org/en-US/docs/Web/API/LockManager/request'
+              '@skorpland/gotrue-js: Navigator LockManager returned a null lock when using #request without ifAvailable set to true, it appears this browser is not following the LockManager spec https://developer.mozilla.org/en-US/docs/Web/API/LockManager/request'
             )
 
             return await fn()

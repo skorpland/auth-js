@@ -98,7 +98,7 @@ export const resolveFetch = (customFetch?: Fetch): Fetch => {
     _fetch = customFetch
   } else if (typeof fetch === 'undefined') {
     _fetch = (...args) =>
-      import('@powerbase/node-fetch' as any).then(({ default: fetch }) => fetch(...args))
+      import('@skorpland/node-fetch' as any).then(({ default: fetch }) => fetch(...args))
   } else {
     _fetch = fetch
   }

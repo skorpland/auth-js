@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { AuthClient } from '@powerbase/auth-js'
+import { AuthClient } from '@skorpland/auth-js'
 import './tailwind.output.css'
 
 const powerbaseURL = process.env.REACT_APP_POWERBASE_URL

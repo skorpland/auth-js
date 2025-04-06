@@ -4,37 +4,37 @@ An isomorphic JavaScript client library for the [Powerbase Auth](https://github.
 
 ## Docs
 
-- Using `auth-js`: https://powerbase.com/docs/reference/javascript/auth-signup
-- TypeDoc: https://powerbase.github.io/auth-js/v2
+- Using `auth-js`: https://powerbase.club/docs/reference/javascript/auth-signup
+- TypeDoc: https://skorpland.github.io/auth-js/v2
 
 ## Quick start
 
 Install
 
 ```bash
-npm install --save @powerbase/auth-js
+npm install --save @skorpland/auth-js
 ```
 
 Usage
 
 ```js
-import { AuthClient } from '@powerbase/auth-js'
+import { AuthClient } from '@skorpland/auth-js'
 
 const GOTRUE_URL = 'http://localhost:9999'
 
 const auth = new AuthClient({ url: GOTRUE_URL })
 ```
 
-- `signUp()`: https://powerbase.io/docs/reference/javascript/auth-signup
-- `signIn()`: https://powerbase.io/docs/reference/javascript/auth-signin
-- `signOut()`: https://powerbase.io/docs/reference/javascript/auth-signout
+- `signUp()`: https://powerbase.club/docs/reference/javascript/auth-signup
+- `signIn()`: https://powerbase.club/docs/reference/javascript/auth-signin
+- `signOut()`: https://powerbase.club/docs/reference/javascript/auth-signout
 
 ### Custom `fetch` implementation
 
 `auth-js` uses the [`cross-fetch`](https://www.npmjs.com/package/cross-fetch) library to make HTTP requests, but an alternative `fetch` implementation can be provided as an option. This is most useful in environments where `cross-fetch` is not compatible, for instance Cloudflare Workers:
 
 ```js
-import { AuthClient } from '@powerbase/auth-js'
+import { AuthClient } from '@skorpland/auth-js'
 
 const AUTH_URL = 'http://localhost:9999'
 

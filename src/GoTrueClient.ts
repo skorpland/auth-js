@@ -1511,21 +1511,21 @@ export default class GoTrueClient {
       const actuallyExpiresIn = expiresAt - timeNow
       if (actuallyExpiresIn * 1000 <= AUTO_REFRESH_TICK_DURATION_MS) {
         console.warn(
-          `@powerbase/gotrue-js: Session as retrieved from URL expires in ${actuallyExpiresIn}s, should have been closer to ${expiresIn}s`
+          `@skorpland/gotrue-js: Session as retrieved from URL expires in ${actuallyExpiresIn}s, should have been closer to ${expiresIn}s`
         )
       }
 
       const issuedAt = expiresAt - expiresIn
       if (timeNow - issuedAt >= 120) {
         console.warn(
-          '@powerbase/gotrue-js: Session as retrieved from URL was issued over 120s ago, URL could be stale',
+          '@skorpland/gotrue-js: Session as retrieved from URL was issued over 120s ago, URL could be stale',
           issuedAt,
           expiresAt,
           timeNow
         )
       } else if (timeNow - issuedAt < 0) {
         console.warn(
-          '@powerbase/gotrue-js: Session as retrieved from URL was issued in the future? Check the device clock for skew',
+          '@skorpland/gotrue-js: Session as retrieved from URL was issued in the future? Check the device clock for skew',
           issuedAt,
           expiresAt,
           timeNow

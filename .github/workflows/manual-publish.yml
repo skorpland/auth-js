@@ -42,7 +42,7 @@ jobs:
           npm ci
           npm run build
 
-      - name: Publish @powerbase/${{ inputs.package }} @v${{ inputs.version }}
+      - name: Publish @skorpland/${{ inputs.package }} @v${{ inputs.version }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
