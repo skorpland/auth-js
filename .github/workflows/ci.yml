@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - next
+      - rc
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test / OS ${{ matrix.os }} / Node ${{ matrix.node }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: ["18", "20"]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Run tests
+        run: |
+          npm t
+
+      - name: Upload coverage results to Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./test/coverage/lcov.info
