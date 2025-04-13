@@ -1,6 +1,6 @@
 {
   "name": "@skorpland/auth-js",
-  "version": "2.71.1",
+  "version": "2.71.4",
   "private": false,
   "description": "Official client library for Powerbase Auth",
   "keywords": [
@@ -44,14 +44,16 @@
     "docs:json": "typedoc --json docs/v2/spec.json --excludeExternals --excludePrivate --excludeProtected src/index.ts"
   },
   "dependencies": {
-    "@skorpland/node-fetch": "^2.7.3"
+    "@skorpland/node-fetch": "^2.7.5"
   },
   "devDependencies": {
+    "typescript": "4.7.4",
+    "typedoc": "^0.22.16",
     "@types/faker": "^5.1.6",
     "@types/jest": "^28.1.6",
     "@types/jsonwebtoken": "^8.5.6",
-    "@types/node": "^18.16.19",
-    "@types/node-fetch": "^2.7.3",
+    "@types/node": "18.17.14",
+    "@types/node-fetch": "^2.6.4",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
     "eslint": "^8.20.0",
@@ -69,9 +71,8 @@
     "prettier": "2.7.1",
     "rimraf": "^3.0.2",
     "semantic-release-plugin-update-version-in-files": "^1.1.0",
-    "ts-jest": "^28.0.7",
-    "typedoc": "^0.22.16",
-    "typescript": "^4.7.4"
+    "ts-jest": "^28.0.7"
+   
   },
   "packageManager": "pnpm@10.7.0+sha512.6b865ad4b62a1d9842b61d674a393903b871d9244954f652b8842c2b553c72176b278f64c463e52d40fff8aba385c235c8c9ecf5cc7de4fd78b8bb6d49633ab6"
 }
