@@ -1,6 +1,6 @@
 {
   "name": "@skorpland/auth-js",
-  "version": "2.71.4",
+  "version": "2.71.5",
   "private": false,
   "description": "Official client library for Powerbase Auth",
   "keywords": [
